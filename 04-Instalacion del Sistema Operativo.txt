@@ -86,4 +86,6 @@ Inistalacion del Sistema Operativo
 
 3) ir a la VM creada, apretar el >_Console y dar inicio
 
-4) instalar el Sistema Operativo                    
+4) instalar el Sistema operativo
+
+5) instalacion de ubunto server --> https://www.youtube.com/watch?v=mjP06XGnotw
