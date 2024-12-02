@@ -1,0 +1,39 @@
+IP del equipo
+
+192.168.1.64
+
+() Perfil de configuracion
+
+    nombre: vmserver
+
+    ServerName: jellyfin
+
+    nombre de usuario: vmserver
+
+    contraseña: server25
+
+() fijarse si el disco se encuentra del tamaño correcto
+
+    df -h: muestra el espacio en el disco
+
+    sudo resize2fs /dev/ubuntu-vg/ubuntu-lv: re dimensiona el disco con el espacio que no esta asignado (la ruta depende donde este encontrada)
+
+
+Portainer:
+
+ingresar a portainer: https://192.168.1.64:9443
+
+user name: vmserver
+
+password: sErver25jano
+
+pel!cul@s2025
+
+
+lets encrypt (certbot)
+
+
+video: https://www.youtube.com/watch?v=XD0JAx4G_7k&t=215s
+
+
+cerbot: https://certbot.eff.org/instructions?ws=nginx&os=pip

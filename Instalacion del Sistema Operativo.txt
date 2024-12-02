@@ -1,0 +1,89 @@
+https://www.youtube.com/watch?v=-OlzEmI0BP8
+
+Inistalacion del Sistema Operativo
+
+1) Es necesario cargar primero la ISO en promox
+
+    a) hacer click en Local(pve) [Nombre de la maquina virtual]
+
+    b) ir a ISO Imagenes
+
+    c) upload
+
+    d) seleccionar la imagen deseada y apretar upload
+
+    e) esperar a que cargue (TASK OK) quiere decir finalizado
+
+2) instalacion de la VM
+
+    a) ir a Local(pve)
+
+    b) hacer click en (Create VM)
+
+        SOLAPAS
+
+            1) General
+
+                Node: colocar la maquina deseada en este caso pve
+
+                VM ID: Colocar un numero deseado para identificar la maquina (100 es el valor por defauld)
+
+                Name: nombre de la maquina
+
+            2) OS
+
+                ISO imagen: colocar la imagen que se encuentra cargada
+
+                TYPE: colocar el sistema operativo de la imagen seleccionada en este caso Linux
+
+                Version: dejar la mas actualizada
+            
+            3) System
+
+                Graphic Card: en este caso se elegui VirtlO-GPU por que es compatible con Linux automaticamente
+                              si se usa con windwos es recomendale dejarlo en default
+                
+                Machine: colocar Q35 para que este todo actualizado
+
+                Bios: coloco la OVMF (UEFI) para que tambein este actualiado todo
+
+                EFI Storage: colocar la unica opcion, en este caso Local-lvm
+                             si hay 2 grupos instalarlo en el grupo donde esta el disco deseado
+
+                SCSI Controler: dejarlo como viene (virtlO SCSI single)
+
+            4) Disk
+
+                BUS/DEVICE: si estoy usuando Linux elegir (VirtlO Block) ya que es mas complitible y mejora el rendimiento
+                            si se usa Windows elegir (SATA o SCSI)
+
+                STORAGE: colcar el disco donde instalar la maquina virtual
+
+                DISK SIZE (GB): colocar la cantidad de GB necesarios que necesites
+
+                TODO LO DEMAS POR DEFAULD
+            
+            5) CPU
+
+                SOCKETS: elegir la cantidad de SOCKETS necesarios en este caso 1
+
+                CORES: elegir la cantida de nucleos que vamos a usar para la maquina, en este caso probamos con 2 
+
+                TYPE: elegir "HOST" lo que significa esto es que la VM se ejecutara en la CPU del HOST, sea cual sea la CPU que tengas
+                      en tu maquina host (esta forma es la que le da mejor rendimiento a la VM)
+            
+            6) Memory
+
+                MEMORY (MB): colocar la cantidad de momoria Ram necesaria para que funcione (se puede cambiar despues)
+
+            7) NetWork (configuramos una Red Bridge) para que la VM se conecte por puerte a la de red Promox, esto va a permitir que la VM tenga la misma IP
+                       que la red domestica
+
+                MODEL: si uso linux es recomendable usar "virtlO(paravirtualized)"
+                       si se usa Windows elegir "Intel E1000" o "Realtek(RTL8139)" ya que windows tiene estos controladores
+            
+            8) Confirm: ver si todo esta correcto y apretar confirm para que se cree
+
+3) ir a la VM creada, apretar el >_Console y dar inicio
+
+4) instalar el Sistema Operativo                    

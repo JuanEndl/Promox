@@ -1,0 +1,32 @@
+https://www.youtube.com/watch?v=1LPyWoh_nlk
+
+instalacion de promox
+
+1) install promox VE (Graphical)
+
+2) aceptar terminos y condiciones
+
+3) elegir el disco a istalar promox
+
+    a) por el momento en defould
+
+4) elegir la localidad
+
+5) crear el password, no hace falta coolocar el email
+
+    Password  Spromox2025 --> ver si tomo la mayuscula
+
+6) elegir la ip de la dirrecion de promos
+
+    a) 
+        hostmane: pve.virtualMachine
+
+        ip addres: 192.168.1.50
+
+        DNS server: 8.8.8.8 (google)
+
+7) instalar
+
+8) una vez instalado ingresar a la web con la ip asignada en el puerto :8006
+
+    a) 192.168.1.50:8006

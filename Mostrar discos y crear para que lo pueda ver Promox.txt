@@ -1,0 +1,65 @@
+https://www.youtube.com/watch?v=8PlWvhYyc_M
+
+
+Mostrar discos y crear para que lo pueda ver Promox
+
+1) abrir la terminar en promox y colocar el siguente comando
+
+    a) lsblk para mostrarnos los discos
+
+    b) crear la particion inical: colocar el comando fdisk y la ruta del disco
+
+        1) fdisk /dev/sda 
+
+        2) crear una nueva particion colocar la N de NEW
+
+        3) despúes colocar la P de (primario)
+
+        4) colocar el 1 por default (seria el nombre de la particion)
+
+        5) dejar el en sector del 2048 (default)
+
+        6) apretar enter y se crea la primera parte
+
+        7) apretar W para guardar los cambios
+
+    c) revisar en el disco con un refres
+
+    d) crear el volumen logico:
+
+       1) pvcreate /dev/"nombre de donde se encuetra la particion creada anteriormente"
+
+            ejemplo
+            -------
+                pvcreate /dev/sda1
+
+
+       2) apretar enter para que lo cree
+
+    e) crear un grupo para que promox lo pueda identifcar para montar
+
+        vgcreate "colocar el nombre a identificarlo"
+
+        ejemplo
+        -------
+            vgcreate SSD01 /dev/sba1  
+    
+    f) apretar enter para que lo Cree
+
+2) Montar el disco
+
+    a) ir a datacenter / Storage
+
+    b) apretar el boton Add
+
+    c) colocarlo como LVM
+
+        ID: colocar el nombre del disco
+
+        BASE STORAGE: colocar Existing volume groups
+
+        VOLUME GROUP: colocar el nombre del grupo existente en este caso fue creado "SSD01"
+
+        CONTENT: Disk Image, Container
+    
+    d) apretar en add

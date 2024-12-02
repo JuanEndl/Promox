@@ -1,0 +1,45 @@
+promox web
+
+
+1) colocar la ip asignada en el puerto correspondiente y entrar en la web
+
+    a) 192.168.1.50:8006
+
+2) logearse con el usuario
+
+    user name: root
+    password: Spromox2025
+
+3) desactivar las actualiazaciones del prepositorio pago
+
+    a) Update Repositories
+
+    b) desactivar los ultimos 2 
+
+        1) https://enterprise.promox.com/debian/ceph.... etc
+
+        2) https://enterprise.promox.com/debian/pve
+
+4) agregar el reposito sin suscripcion
+
+    a) apreta en add
+
+    b) en Repository agregar (No-Subscription) 
+
+    c) agregar
+
+5) actualizar promox (tambien se puede hacer por SSH)
+
+    a) ir a update
+
+    b) apretar en el boton >_ Upgrade
+
+    C) listo
+
+por SSH o consola 
+
+    a) abrir la consola, apretar en el boton >_Shell
+
+    b) colocar el comando apt update
+
+    c) colocar el comando apt upgrade
